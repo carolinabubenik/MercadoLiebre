@@ -16,39 +16,95 @@ header {
 }
 
 .header-container {
-    padding: 5vw;
+    /* padding: 5vw; */
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header img{
-    width: 50%;
+header img {
+    width: 48%;
 }
 
-header p{
-    font-size: 0.8rem;
+.header-search-bar {
+    width: 48%;
+    margin-left: 8px;
 }
 
-header a{
-    display: block;
-    font-size: 1rem;
+.header-search-bar form {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.header-search-bar form input {
+    width: 10px;
+    flex-grow: 1;
+    line-height: 1.6rem;
+    border: 0px black solid;
+    border-top-left-radius: 7%;
+    border-bottom-left-radius: 7%;
+    padding: 2px;
+    font-size: 0.7rem;
+}
+
+.header-search-bar form i {
+    line-height: 1.6rem;
+    border: 0px black solid;
+    border-top-right-radius: 7%;
+    border-bottom-right-radius: 7%;
+    padding: 2px;
+    background-color: white;
+    color: gray;
+    font-size: 0.7rem;
+}
+
+/* .header-search-bar form button {
+    line-height: 1.6rem;
+    border: 0px black solid;
+    background-color: white;
+    color:gray;
+    border-radius: 6%;
+    padding: 2px;
+} */
 
 .header-subtitle {
     text-align: center;
-    line-height: 3rem;
+    margin-top: 10px;
+    margin-left: 8px;
+    font-size: 0.8rem;
+    width: 100%;
 }
 
-.header-site-navbar {
-    display: none; /* Se muestra desde tablet */
+.header-navigation-bar {
+    /* Se muestra desde tablet */
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
 }
 
-.header-login-navbar {
-    display: none; /* Se muestra desde tablet */
-    margin-top: 20px;
+/* Links de la Site nav-bar */
+.header-site-navbar a {
+    font-size: 1rem;
+    margin-right: 15px;
+}
+
+/* Links del Login nav-bar */
+.header-login-navbar a {
+    font-size: 1rem;
+    margin-left: 15px;
 }
 
 .header-burguer-menu-container {
-    display: block /* Se oculta desde tablet */;
+    /* Se oculta desde tablet */
+    display: block;
     text-align: center;
+    width: 100%;
 }
 
 .header-burguer-menu {
@@ -74,26 +130,41 @@ article img {
 
 .products-group {
     margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .product-container {
-    margin-top:10px;
+    margin-top: 10px;
     background-color: white;
+    width: 100%;
 }
 
 .product-detail {
     border-top: 1px solid #ebebeb;
     padding: 15px;
+    position: relative;
 }
 
 .product-truck {
     color: #39b54a;
     border: solid #39b54a 1px;
     border-radius: 50%;
-    padding: 10px;
+
+    /* Tomado del pdf */
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #FFF;
+    position: absolute;
+    right: 20px;
+    top: -15px;
 }
 
-.products-group h4 {
+.product-section {
     font-size: 24px;
     line-height: 3rem;
     color: #666;
@@ -103,14 +174,21 @@ p {
     font-size: 12px;
 }
 
+.product-amounts {
+    display: flex;
+    justify-content: space-between;
+}
+
 .product-price {
     font-size: 18px;
+    width: 30%;
 }
 
 .product-discount {
     font-size: 16px;
     color: #39b54a;
     font-weight: bold;
+    flex-grow: 1;
 }
 
 .product-description {
@@ -127,13 +205,13 @@ footer {
     text-align: center;
 }
 
-footer h4{
+footer h4 {
     /* line-height: 4rem; */
 }
 
 footer i {
     color: #1259c3;
-    font-size: 2em; 
+    font-size: 2em;
     margin-top: 40px;
     margin-bottom: 10px;
 }
@@ -148,28 +226,27 @@ footer i {
 /* ------------------ MEDIA QUERIES ------------------  */
 /* Tablets */
 @media (min-width: 361px) {
-    header img{
+    header img {
         width: 30%;
     }
 
-    header p{
-        font-size: 1.2rem;
+    .header-search-bar {
+        width: 30%;
     }
 
-    .header-search-bar input {
-        width: 22%;
+    .header-subtitle {
+        font-size: 1rem;
+        width: 33%;
+        flex-grow: 1;
     }
 
-    .header-site-navbar {
-        display: block; /* Se muestra desde tablet; en mobile se oculta */
-    }
-
-    .header-login-navbar {
-        display: block; /* Se muestra desde tablet; en mobile se oculta */
+    .header-navigation-bar{
+       display: flex;
     }
 
     .header-burguer-menu-container {
-        display: none; /* Se muestra sólo en mobile*/
+        /* Se muestra sólo en mobile*/
+        display: none;
     }
 
     .product-description {
@@ -178,11 +255,17 @@ footer i {
 
     .product-container {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 48%;
     }
+
 }
 
 /* Desktop */
 @media (min-width: 769px) {
+
+    .product-container {
+        width: 24%;
+    }
 
 }
 
