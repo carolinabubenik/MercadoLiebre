@@ -7,6 +7,7 @@
 
 body {
     /* padding: 5vw; Trae problemas dejarlo acá; moverlo a cada grupo principal. */
+    background-color: #ebebeb;
 }
 
 /* ------------------ HEADER ------------------  */
@@ -36,15 +37,21 @@ header a{
     line-height: 3rem;
 }
 
-.navigation-second-group {
+.header-site-navbar {
+    display: none; /* Se muestra desde tablet */
+}
+
+.header-login-navbar {
+    display: none; /* Se muestra desde tablet */
     margin-top: 20px;
 }
 
-.burguer-menu-container {
+.header-burguer-menu-container {
+    display: block /* Se oculta desde tablet */;
     text-align: center;
 }
 
-.burguer-menu {
+.header-burguer-menu {
     margin-top: 20px;
     font-size: large;
     color: white;
@@ -56,7 +63,9 @@ header a{
 
 /* ------------------ MAIN ------------------  */
 main {
-    padding: 5vw;
+    /* padding: 5vw; */
+    width: 90%;
+    margin: auto;
 }
 
 article img {
@@ -64,15 +73,30 @@ article img {
 }
 
 .products-group {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .product-container {
     margin-top:10px;
+    background-color: white;
+}
+
+.product-detail {
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+}
+
+.product-truck {
+    color: #39b54a;
+    border: solid #39b54a 1px;
+    border-radius: 50%;
+    padding: 10px;
 }
 
 .products-group h4 {
     font-size: 24px;
+    line-height: 3rem;
+    color: #666;
 }
 
 p {
@@ -85,10 +109,14 @@ p {
 
 .product-discount {
     font-size: 16px;
+    color: #39b54a;
+    font-weight: bold;
 }
 
 .product-description {
+    display: none;
     font-size: 16px;
+    color: #666;
 }
 
 
@@ -105,15 +133,57 @@ footer h4{
 
 footer i {
     color: #1259c3;
-    font-size: 2rem;
+    font-size: 2em; 
     margin-top: 40px;
-    line-height: 3rem !important;
+    margin-bottom: 10px;
 }
 
 .copyright {
     margin-top: 40px;
     text-align: left;
     font-size: 0.7rem;
+}
+
+
+/* ------------------ MEDIA QUERIES ------------------  */
+/* Tablets */
+@media (min-width: 361px) {
+    header img{
+        width: 30%;
+    }
+
+    header p{
+        font-size: 1.2rem;
+    }
+
+    .header-search-bar input {
+        width: 22%;
+    }
+
+    .header-site-navbar {
+        display: block; /* Se muestra desde tablet; en mobile se oculta */
+    }
+
+    .header-login-navbar {
+        display: block; /* Se muestra desde tablet; en mobile se oculta */
+    }
+
+    .header-burguer-menu-container {
+        display: none; /* Se muestra sólo en mobile*/
+    }
+
+    .product-description {
+        display: block;
+    }
+
+    .product-container {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+
 }
 
 
