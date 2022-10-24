@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    padding: 5vw;
+}
+
+/* ------------------ HEADER ------------------  */
+header img{
+    width: 100%;
+}
+
+header p{
+    font-size: 0.8rem;
+}
+
+header a{
+    display: block;
+}
+
+
+/* ------------------ MAIN ------------------  */
+article img {
+    width: 100%;
+}
+
+.products-group {
+    margin-top: 20px;
+}
+
+.product-container {
+    margin-top:10px;
+}
+
+
+/* ------------------ FOOTER ------------------  */
+footer {
+    margin-top: 20px;
+}
+footer h4{
+    line-height: 4rem;
+}
+
+.copyright {
+    margin-top: 20px;
+}
