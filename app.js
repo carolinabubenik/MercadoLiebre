@@ -45,3 +45,8 @@ app.get('/login', (req, res) =>
 app.get('/mis-compras', (req, res) => 
     res.sendFile(path.resolve(__dirname, './views/mis-compras.html'))
 )
+
+// POSTs
+app.post('/productos', (req, res) =>
+    res.redirect('/')
+)

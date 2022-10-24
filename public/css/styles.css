@@ -2,15 +2,24 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-family: 'Roboto';
 }
 
 body {
-    padding: 5vw;
+    /* padding: 5vw; Trae problemas dejarlo acá; moverlo a cada grupo principal. */
 }
 
 /* ------------------ HEADER ------------------  */
+header {
+    background-color: #EAC926;
+}
+
+.header-container {
+    padding: 5vw;
+}
+
 header img{
-    width: 100%;
+    width: 50%;
 }
 
 header p{
@@ -19,10 +28,37 @@ header p{
 
 header a{
     display: block;
+    font-size: 1rem;
+}
+
+.header-subtitle {
+    text-align: center;
+    line-height: 3rem;
+}
+
+.navigation-second-group {
+    margin-top: 20px;
+}
+
+.burguer-menu-container {
+    text-align: center;
+}
+
+.burguer-menu {
+    margin-top: 20px;
+    font-size: large;
+    color: white;
+    background-color: #1259c3;
+    padding: 10px;
+    border-radius: 15%;
 }
 
 
 /* ------------------ MAIN ------------------  */
+main {
+    padding: 5vw;
+}
+
 article img {
     width: 100%;
 }
@@ -35,15 +71,71 @@ article img {
     margin-top:10px;
 }
 
+.products-group h4 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 12px;
+}
+
+.product-price {
+    font-size: 18px;
+}
+
+.product-discount {
+    font-size: 16px;
+}
+
+.product-description {
+    font-size: 16px;
+}
+
+
 
 /* ------------------ FOOTER ------------------  */
 footer {
-    margin-top: 20px;
+    padding: 5vw;
+    text-align: center;
 }
+
 footer h4{
-    line-height: 4rem;
+    /* line-height: 4rem; */
+}
+
+footer i {
+    color: #1259c3;
+    font-size: 2rem;
+    margin-top: 40px;
+    line-height: 3rem !important;
 }
 
 .copyright {
-    margin-top: 20px;
+    margin-top: 40px;
+    text-align: left;
+    font-size: 0.7rem;
 }
+
+
+/* Paleta de Colores::after
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+*/
+
+/* Tipografías:
+Familia: 'Roboto'
+*/
+
+/* Tamaños Tipográficos::after
+Cuerpos de texto: 12px;
+Titulares (Basado en tu última visita/Ofertas): 24px;
+Precios: 18px;
+Descuentos: 16px;
+Descripciones: 16px;
+*/
+
+/* Íconos: tomar de FontAwesome */
