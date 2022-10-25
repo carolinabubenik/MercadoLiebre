@@ -24,7 +24,7 @@ header {
     align-items: center;
 }
 
-header img {
+.header-logo {
     width: 48%;
 }
 
@@ -124,6 +124,10 @@ main {
     margin: auto;
 }
 
+.home-banner {
+    width: 100%;
+}
+
 article img {
     width: 100%;
 }
@@ -198,15 +202,75 @@ p {
 }
 
 
+/* ------------------ REGISTER ------------------  */
+.reg-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.reg-form-item {
+    width: 100%;
+    margin-top: 20px;
+    border: 0px;
+    padding: 7px;
+    border-radius: 10%;
+}
+
+.reg-label {
+    font-weight: bold;
+}
+
+.reg-perfil-de-usuario {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.radiobutton {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.reg-intereses {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.reg-un-interes {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+.reg-un-interes-text {
+    margin: 10px;
+}
+
+#foto-de-perfil {
+    width: 100%;
+}
+
+.btn-submit {
+    margin-top:40px;
+    background-color: #1259c3;
+    color: white;
+}
+
+.btn-reset {
+    background-color: white;
+}
 
 /* ------------------ FOOTER ------------------  */
 footer {
     padding: 5vw;
     text-align: center;
-}
-
-footer h4 {
-    /* line-height: 4rem; */
 }
 
 footer i {
@@ -226,7 +290,7 @@ footer i {
 /* ------------------ MEDIA QUERIES ------------------  */
 /* Tablets */
 @media (min-width: 361px) {
-    header img {
+    .header-logo{
         width: 30%;
     }
 
@@ -240,8 +304,8 @@ footer i {
         flex-grow: 1;
     }
 
-    .header-navigation-bar{
-       display: flex;
+    .header-navigation-bar {
+        display: flex;
     }
 
     .header-burguer-menu-container {
@@ -258,6 +322,29 @@ footer i {
         width: 48%;
     }
 
+    .reg-perfil-de-usuario {
+        justify-content: flex-start;
+    }
+
+    .reg-perfil-de-usuario label {
+        margin-right: 40px;
+    }
+
+    .btn-submit {
+        width: 200px;
+    }
+    
+    .btn-reset {
+        width: 200px;
+        margin-top:40px;
+        margin-left: 20px;    
+    }
+
+    *:required:invalid {
+        /* background-color: red; */
+        background-image: linear-gradient(to right, salmon, darkred );
+    }
+
 }
 
 /* Desktop */
@@ -265,6 +352,10 @@ footer i {
 
     .product-container {
         width: 24%;
+    }
+
+    .reg-form {
+        max-width: 70%;
     }
 
 }
