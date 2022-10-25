@@ -166,6 +166,12 @@ article img {
     position: absolute;
     right: 20px;
     top: -15px;
+
+    transition: transform 500ms;
+}
+
+.product-truck:hover {
+    transform: rotateZ(-90deg);
 }
 
 .product-section {
@@ -230,7 +236,7 @@ p {
 }
 
 .radiobutton {
-    margin-right: 10px;
+    margin-right: 20px;
     margin-top: 10px;
 }
 
@@ -246,7 +252,7 @@ p {
 }
 
 .checkbox {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .reg-un-interes-text {
@@ -263,6 +269,10 @@ p {
     color: white;
 }
 
+.btn-submit:hover {
+    background-color: #0022AA;
+}
+
 .btn-reset {
     background-color: white;
 }
@@ -271,6 +281,16 @@ p {
 footer {
     padding: 5vw;
     text-align: center;
+
+    /* Hacemos que se muestre diferente para desktop */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.footer-group {
+    /* Para mobile 100, para desktop 33 */
+    width: 100%;
 }
 
 footer i {
@@ -278,6 +298,11 @@ footer i {
     font-size: 2em;
     margin-top: 40px;
     margin-bottom: 10px;
+}
+
+footer i:hover {
+    color:#EAC926;
+    /* color: #0022AA; */
 }
 
 .copyright {
@@ -314,12 +339,22 @@ footer i {
     }
 
     .product-description {
+        /* display: block; */
+        /* Ahora estará oculta y sólo se mostrará con Hover */
+    }
+
+    article:hover .product-description {
         display: block;
     }
 
     .product-container {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
+        /* Ahora estará oculto y sólo se mostrará con Hover */
         width: 48%;
+    }
+
+    .product-container:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
     .reg-perfil-de-usuario {
@@ -356,6 +391,13 @@ footer i {
 
     .reg-form {
         max-width: 70%;
+    }
+
+    .footer-group {
+        /* Para mobile 100, para desktop 33 */
+        width: 33%;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
 }
