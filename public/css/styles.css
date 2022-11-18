@@ -170,7 +170,7 @@ article img {
     transition: transform 500ms;
 }
 
-.product-truck:hover {
+article:hover .product-truck {
     transform: rotateZ(-90deg);
 }
 
